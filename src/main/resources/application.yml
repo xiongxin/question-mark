@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: abc
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/question
+    username: root
+    password: root
+  main:
+    allow-bean-definition-overriding: true
+server:
+  port: 8080
+application:
+  message: Hello Phil
+mybatis:
+  type-aliases-package: com.xiongxin.zkc365.domain
+  config-location:
+    - classpath:mybatis-config.xml
+  mapper-locations:
+    - classpath:com/xiongxin/sample/mapper/*.xml
+shiro:
+  enabled: true
